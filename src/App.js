@@ -15,7 +15,7 @@ export default function App() {
         <span>
           This project is coded by Olga Matviichuk and is
           <a
-            href="https://github.com/OlgaMatviichuk/weather-react-app"
+            href="https://github.com/OlgaMatviichuk/weather-app-react"
             target="_blank"
             class="open-source"
             title="GitHub open source"
