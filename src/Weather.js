@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./Weather.css";
 
 export default function Weather() {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -18,18 +19,27 @@ export default function Weather() {
   if (weatherData.ready) {
     return (
       <div className="Weather">
+
+<div className="searchForm">
         <form>
+        <div className="row">
+        <div className="col-9">
           <input
             type="search"
             placeholder="Type a city..."
             className="form-control search-input"
           />
+          </div>
+          <div className="col-3">
           <input
             type="submit"
             className="btn btn-primary w-100"
             value="Search"
           />
+          </div>
+          </div>
         </form>
+</div>
         <h1>{weatherData.city}</h1>
         <ul>
           <li> Wednesday, October 5</li>

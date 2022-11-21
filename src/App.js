@@ -9,10 +9,9 @@ export default function App() {
     <div className="App">
       <div className="container">
         <h1 className="text-center mt-5"> </h1>
-       
         <Weather />
       </div>
-      <div class="footnote text-center mb-5">
+      <div class="footnote text-center mt-4">
         <span>
           This project is coded by Olga Matviichuk and is
           <a

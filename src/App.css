@@ -4,7 +4,8 @@
 }
 div.container {
   display: block;
-  margin: 50px 400px;
+ margin-top: 40px;
+
   padding: 0 50px 75px;
   border: 1px solid grey;
   max-width: 1000px;
