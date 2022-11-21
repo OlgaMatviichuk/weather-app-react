@@ -1,6 +1,7 @@
 import React from "react";
 import Weather from "./Weather";
 
+
 import "./App.css";
 
 export default function App() {
@@ -8,6 +9,7 @@ export default function App() {
     <div className="App">
       <div className="container">
         <h1 className="text-center mt-5"> </h1>
+       
         <Weather />
       </div>
       <div class="footnote text-center mb-5">
