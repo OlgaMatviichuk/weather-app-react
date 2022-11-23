@@ -8,9 +8,9 @@ export default function Weather() {
     console.log(response.data);
     setWeatherData({
       ready: true,
-      temperature: response.data.main.temp,
+      temperature: Math.round(response.data.main.temp),
       description: response.data.weather[0].description,
-      wind: response.data.wind.speed,
+      wind: Math.round(response.data.wind.speed),
       humidity: response.data.main.humidity,
       city: response.data.name,
     });
@@ -39,27 +39,31 @@ export default function Weather() {
             </div>
           </form>
         </div>
-        <h1>{weatherData.city}</h1>
-        <ul>
-          <li> Wednesday, October 5</li>
-          <li>21:05</li>
-        </ul>
+
         <div className="row">
-          <div className="col-5 text-center" id="current-temperature">
+          <div className="col-4 text-start">
+        <h1>{weatherData.city}</h1>
+        
+          <h6> Wednesday, October 5</h6>
+          <h6>21:05</h6>
+        
+        </div>
+          <div className="col-4 text-center" id="current-temperature">
             <span className="temperature" id="temperature">
               {weatherData.temperature}
             </span>
             <span className="units"> ºC | ºF </span>
           </div>
-          <div className="col-6" id="current-conditions">
-            ☁ <span id="description">{weatherData.description}</span>
+          <div className="col-4 text-start" id="current-conditions">
+            ☁ <span className="text-capitalize" id="description">{weatherData.description}</span>
             <br />
             💦Humidity: <span id="humidity">{weatherData.humidity}%</span>%
             <br />
             💨 Wind: <span id="wind-speed">{weatherData.wind}km/h</span>
           </div>
+          </div>
         </div>
-      </div>
+      
     );
   } else {
     const apiKey = "7095abf8ac84e0b68c9e58e564131570";
