@@ -12,34 +12,33 @@ export default function Weather() {
       description: response.data.weather[0].description,
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
-      city: response.main.name,
+      city: response.data.name,
     });
   }
 
   if (weatherData.ready) {
     return (
       <div className="Weather">
-
-<div className="searchForm">
-        <form>
-        <div className="row">
-        <div className="col-9">
-          <input
-            type="search"
-            placeholder="Type a city..."
-            className="form-control search-input"
-          />
-          </div>
-          <div className="col-3">
-          <input
-            type="submit"
-            className="btn btn-primary w-100"
-            value="Search"
-          />
-          </div>
-          </div>
-        </form>
-</div>
+        <div className="searchForm">
+          <form>
+            <div className="row">
+              <div className="col-9">
+                <input
+                  type="search"
+                  placeholder="Type a city..."
+                  className="form-control search-input"
+                />
+              </div>
+              <div className="col-3">
+                <input
+                  type="submit"
+                  className="btn btn-primary w-100"
+                  value="Search"
+                />
+              </div>
+            </div>
+          </form>
+        </div>
         <h1>{weatherData.city}</h1>
         <ul>
           <li> Wednesday, October 5</li>
@@ -55,9 +54,9 @@ export default function Weather() {
           <div className="col-6" id="current-conditions">
             ☁ <span id="description">{weatherData.description}</span>
             <br />
-            💦Humidity: <span id="humidity">{weatherData.data.humidity}%</span>%
+            💦Humidity: <span id="humidity">{weatherData.humidity}%</span>%
             <br />
-            💨 Wind: <span id="wind-speed">{weatherData.wind}km/h</span> 
+            💨 Wind: <span id="wind-speed">{weatherData.wind}km/h</span>
           </div>
         </div>
       </div>
