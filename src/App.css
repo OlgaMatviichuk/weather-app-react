@@ -4,8 +4,7 @@
 }
 div.container {
   display: block;
- margin-top: 40px;
-
+  margin-top: 40px;
   padding: 0 50px 75px;
   border: 1px solid grey;
   max-width: 1000px;
@@ -44,4 +43,3 @@ h6 {
 #current-conditions {
   font-size: 20px;
 }
-
