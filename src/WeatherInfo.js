@@ -13,7 +13,7 @@ export default function WeatherInfo(props) {
           </h6>
         </div>
         
-        <div className="col-4 text-center" id="current-temperature">
+        <div className="col-4 text-center clearfix  " id="current-temperature">
           <img 
           src={props.data.iconUrl} 
           alt={props.data.description}/>
