@@ -12,12 +12,18 @@ export default function WeatherInfo(props) {
             <CurrentDate date={props.data.date} />
           </h6>
         </div>
+        
         <div className="col-4 text-center" id="current-temperature">
+          <img 
+          src={props.data.iconUrl} 
+          alt={props.data.description}/>
           <span className="temperature" id="temperature">
             {props.data.temperature}
           </span>
           <span className="units"> ºC | ºF </span>
+          
         </div>
+
         <div className="col-4 text-start" id="current-conditions">
           ☁{" "}
           <span className="text-capitalize" id="description">
