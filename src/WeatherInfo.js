@@ -4,7 +4,7 @@ import WeatherTemperature from "./WeatherTemperature";
 
 export default function WeatherInfo(props) {
   return (
-    <div className="WeatherSearch">
+    <div className="today">
       <div className="row">
         <div className="col-4 text-start">
           <h1>{props.data.city}</h1>
@@ -14,7 +14,7 @@ export default function WeatherInfo(props) {
           </h6>
         </div>
 
-        <div className="col-4 text-center clearfix  " id="current-temperature">
+        <div className="col-4 text-start" id="current-temperature">
           <img src={props.data.iconUrl} alt={props.data.description} />
           <WeatherTemperature celcius={props.data.temperature} />
         </div>
