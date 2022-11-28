@@ -1,7 +1,6 @@
 import React from "react";
 import Weather from "./Weather";
 
-
 import "./App.css";
 
 export default function App() {
@@ -23,6 +22,16 @@ export default function App() {
           >
             {" "}
             open-sourced
+          </a>{" "}
+          and{" "}
+          <a
+            href="https://glittering-kleicha-4a4219.netlify.app"
+            target="_blank"
+            class="open-source"
+            title="GitHub open source"
+            rel="noreferrer"
+          >
+            hosted on Netlify
           </a>
         </span>
       </div>{" "}
