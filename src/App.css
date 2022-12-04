@@ -54,3 +54,8 @@ img {
   position: relative;
   top: -16px;
 }
+
+.WeatherForecast {
+  max-width: 600px;
+  margin-left: 130px;
+}
