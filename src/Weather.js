@@ -12,6 +12,7 @@ export default function Weather(props) {
   function handleResponse(response) {
     setWeatherData({
       ready: true,
+      coordinates: response.data.coord,
       temperature: Math.round(response.data.main.temp),
       description: response.data.weather[0].description,
       iconUrl:`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
@@ -61,7 +62,7 @@ function search () {
             </div>
           </form>
           <WeatherInfo data={weatherData} />
-          <WeatherForecast />
+          <WeatherForecast coordinates={weatherData.coordinates} />
         </div>
       </div>
     );
